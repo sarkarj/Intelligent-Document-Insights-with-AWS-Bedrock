@@ -200,6 +200,11 @@ temperature: 0.1  # For factual responses
 max_tokens: 1000
 top_k: 5         # Number of retrieved documents
 ```
+```
+MAX_CITATIONS = 5  # Maximum number of citations to show
+MIN_CONFIDENCE_THRESHOLD = 0.1  # Minimum confidence score for citations
+CHAIN_OF_THOUGHT_STEPS = 4  # Number of reasoning steps to show
+```
 
 ## 🔐 Security & Enterprise Features
 
