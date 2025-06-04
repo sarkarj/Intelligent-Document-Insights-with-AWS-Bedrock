@@ -197,7 +197,7 @@ graph TB
 ```python
 # LLM Configuration
 temperature: 0.1  # For factual responses
-max_tokens: 1000
+max_tokens: 2000
 top_k: 5         # Number of retrieved documents
 ```
 ```
