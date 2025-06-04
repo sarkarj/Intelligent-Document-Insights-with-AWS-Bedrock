@@ -198,7 +198,7 @@ graph TB
 # LLM Configuration
 temperature: 0.1  # For factual responses
 max_tokens: 2000
-top_k: 5         # Number of retrieved documents
+search_kwargs={"k": 10} # Return the top 10 most similar documents
 ```
 ```
 MAX_CITATIONS = 5  # Maximum number of citations to show
