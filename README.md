@@ -73,6 +73,10 @@ graph TB
     class UI_Admin,UI_User,UI_Explorer,Ingestion,Retrieval,Generation appComponent;
     class S3Store,FAISS_VS,FAISS_VS_Temp storage;
 ```
+## 📸 Screens
+
+<img src="./screens/admin_module.png" alt="App Screenshot" width="300"><img src="./screens/explorer_module.png" alt="App Screenshot" height="300"><img src="./screens/user_module.png" alt="App Screenshot" width="300">
+
 ## ⚙️ System Architecture
 
 ### Document Processing Pipeline
