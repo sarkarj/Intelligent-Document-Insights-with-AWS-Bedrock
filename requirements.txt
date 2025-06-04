@@ -1,0 +1,37 @@
+# Web Framework - Streamlit for UI
+streamlit>=1.28.0
+
+# Environment and Configuration
+python-dotenv>=1.0.0
+
+# LangChain - Core orchestration framework
+langchain>=0.1.0
+langchain-community>=0.0.30
+langchain-aws>=0.1.0
+langchain-core>=0.1.0
+
+# AWS Services
+boto3>=1.34.0
+botocore>=1.34.0
+
+# ML and NLP - Sentence Transformers and Cross-Encoder
+sentence-transformers>=2.2.2
+torch>=2.0.0
+transformers>=4.30.0
+
+# Vector Database - FAISS for local embeddings
+faiss-cpu>=1.7.4
+
+# PDF and Image Processing
+PyPDF2>=3.0.1
+Pillow>=10.0.0
+pytesseract>=0.3.10
+
+# Text Processing and Document Handling
+numpy>=1.24.0
+
+# System dependencies note:
+# For pytesseract to work properly, you need tesseract-ocr installed on the system:
+# Ubuntu/Debian: apt-get install tesseract-ocr
+# macOS: brew install tesseract
+# Windows: Download from GitHub releases

@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  user-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: aiagent-app:latest  # Tag the built image
+    container_name: aiagent-user-app
+    ports:
+      - "8502:8502"
+    environment:
+      - PYTHONPATH=/app
+      - APP_NAME=user_app
+      - STREAMLIT_SERVER_FILE_WATCHER_TYPE=none
+    env_file:
+      - .env
+    command: ["streamlit", "run", "user_app/app.py", "--server.port=8502", "--server.address=0.0.0.0"]
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - aiagent-network
+
+  admin-app:
+    image: aiagent-app:latest  # Reuse the same image
+    container_name: aiagent-admin-app
+    ports:
+      - "8503:8503"
+    environment:
+      - PYTHONPATH=/app
+      - APP_NAME=admin_app
+      - STREAMLIT_SERVER_FILE_WATCHER_TYPE=none
+    env_file:
+      - .env
+    command: ["streamlit", "run", "admin_app/app.py", "--server.port=8503", "--server.address=0.0.0.0"]
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - aiagent-network
+    depends_on:
+      - user-app  # Ensure the image is built first
+
+  explorer-app:
+    image: aiagent-app:latest  # Reuse the same image
+    container_name: aiagent-explorer-app
+    ports:
+      - "8504:8504"
+    environment:
+      - PYTHONPATH=/app
+      - APP_NAME=explorer_app
+      - STREAMLIT_SERVER_FILE_WATCHER_TYPE=none
+    env_file:
+      - .env
+    command: ["streamlit", "run", "explorer_app/app.py", "--server.port=8504", "--server.address=0.0.0.0"]
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - aiagent-network
+    depends_on:
+      - user-app  # Ensure the image is built first
+
+networks:
+  aiagent-network:
+    driver: bridge
+
+volumes:
+  logs:
+    driver: local
