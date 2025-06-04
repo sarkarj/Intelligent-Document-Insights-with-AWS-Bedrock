@@ -152,8 +152,8 @@ graph TB
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd enterprise-rag-platform
+   git clone https://github.com/sarkarj/Intelligent-Document-Insights-with-AWS-Bedrock.git
+   cd Intelligent-Document-Insights-with-AWS-Bedrock
    ```
 
 2. **Configure AWS settings**
