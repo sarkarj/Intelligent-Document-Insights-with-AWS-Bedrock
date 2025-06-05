@@ -6,7 +6,6 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-Multi--App-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
 [![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-00ADD8)](https://github.com/facebookresearch/faiss)
 [![LangChain](https://img.shields.io/badge/LangChain-Integrated-blueviolet)](https://www.langchain.com/)
-[![Claude](https://img.shields.io/badge/Claude-AI%20Assistant-orange)](https://claude.ai)
 
 
 Transform document repositories into a dynamic, intelligent, and conversational knowledge base using advanced AI and retrieval augmented generation (RAG).
