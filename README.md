@@ -172,7 +172,7 @@ graph TB
     EMBEDDING_BUCKET=<aws_s3_bucket>
    ```
 
-3. **Deploy with Docker Compose**
+3. **🐳 Deploy with Docker Compose**
    ```bash
    docker-compose up -d
    ```
