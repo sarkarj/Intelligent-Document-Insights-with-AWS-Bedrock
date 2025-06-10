@@ -267,3 +267,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) 
 ---
 
 **🤝 Transforming knowledge into conversational intelligence.**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue.svg)]() [![Email](https://img.shields.io/badge/Email-Contact-red.svg)]()
+
+
